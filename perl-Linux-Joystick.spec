@@ -15,10 +15,8 @@ name:      perl-Linux-Joystick
 summary:   Linux-Joystick - Perl module
 version:   0.0.1
 release:   1
-vendor:    A. U. Thor <a.u.thor@a.galaxy.far.far.away>
-packager:  Arix International <cpan2rpm@arix.com>
 license:   Artistic
-group:     Applications/CPAN
+group:     Development/Perl
 url:       http://www.cpan.org
 buildroot: %{_tmppath}/%{name}-%{version}-%(id -u -n)
 buildarch: noarch
@@ -58,15 +56,6 @@ CFLAGS="$RPM_OPT_FLAGS"
 cmd=/usr/share/spec-helper/compress_files
 [ -x $cmd ] || cmd=/usr/lib/rpm/brp-compress
 [ -x $cmd ] && $cmd
-
-# SuSE Linux
-if [ -e /etc/SuSE-release -o -e /etc/UnitedLinux-release ]
-then
-    %{__mkdir_p} %{buildroot}/var/adm/perl-modules
-    %{__cat} `find %{buildroot} -name "perllocal.pod"`  \
-        | %{__sed} -e s+%{buildroot}++g                 \
-        > %{buildroot}/var/adm/perl-modules/%{name}
-fi
 
 # remove special files
 find %{buildroot} -name "perllocal.pod" \
