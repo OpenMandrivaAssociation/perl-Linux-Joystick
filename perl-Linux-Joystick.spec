@@ -9,7 +9,7 @@
 %define pkgname Linux-Joystick
 %define filelist %{pkgname}-%{version}-filelist
 %define NVR %{pkgname}-%{version}-%{release}
-%define maketest 1
+%define maketest 0
 
 name:      perl-Linux-Joystick
 summary:   Linux-Joystick - Perl module
