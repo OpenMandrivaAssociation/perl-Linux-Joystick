@@ -1,15 +1,15 @@
 %define upstream_name    Linux-Joystick
-%define upstream_version 0.0.1
+%define upstream_version v0.0.1
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Linux-Joystick - Perl module
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/B/BW/BWATSON/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Linux-Joystick
+Source0:	https://cpan.metacpan.org/authors/id/B/BW/BWATSON/Linux-Joystick-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
